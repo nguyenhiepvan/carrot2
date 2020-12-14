@@ -1,5 +1,7 @@
 /** Essential Carrot<sup>2</sup> infrastructure, interfaces and implementations. */
-module java.compiler {
+module org.carrot2.core {
+  // javadoc expects a different folder structure.
+  // https://stackoverflow.com/questions/49476559/java-9-error-not-in-a-module-on-the-module-source-path
   requires transitive com.carrotsearch.hppc;
 
   exports org.carrot2.attrs;
