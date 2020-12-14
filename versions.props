@@ -1,6 +1,6 @@
 com.carrotsearch.console:*=1.0.4
 com.carrotsearch.randomizedtesting:*=2.7.7
-com.carrotsearch:hppc=0.8.2
+com.carrotsearch:hppc=0.9.0.RC2
 com.carrotsearch:procfork=1.0.4
 com.fasterxml.jackson.*:jackson-*=2.11.3
 de.jflex:jflex=1.7.0

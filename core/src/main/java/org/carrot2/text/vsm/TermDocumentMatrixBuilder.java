@@ -12,7 +12,6 @@ package org.carrot2.text.vsm;
 
 import com.carrotsearch.hppc.BitSet;
 import com.carrotsearch.hppc.IntIntHashMap;
-import com.carrotsearch.hppc.sorting.IndirectComparator;
 import com.carrotsearch.hppc.sorting.IndirectSort;
 import java.util.Arrays;
 import java.util.function.IntToDoubleFunction;
