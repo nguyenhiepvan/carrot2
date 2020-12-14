@@ -1,7 +1,7 @@
 /** Essential Carrot<sup>2</sup> infrastructure, interfaces and implementations. */
 module java.compiler {
   requires transitive com.carrotsearch.hppc;
-  
+
   exports org.carrot2.attrs;
   exports org.carrot2.clustering;
   exports org.carrot2.clustering.kmeans;

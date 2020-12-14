@@ -10,9 +10,10 @@
  */
 package org.carrot2.math.matrix;
 
-import com.carrotsearch.hppc.sorting.IndirectComparator;
 import com.carrotsearch.hppc.sorting.IndirectSort;
 import java.util.Arrays;
+import java.util.function.IntBinaryOperator;
+
 import org.carrot2.math.mahout.function.DoubleFunction;
 import org.carrot2.math.mahout.function.Functions;
 import org.carrot2.math.mahout.function.IntIntDoubleFunction;
@@ -355,7 +356,7 @@ public class MatrixUtils {
    *     provided comparator.
    */
   public static DoubleMatrix2D sortedRowsView(
-      DoubleMatrix2D matrix, IndirectComparator comparator) {
+      DoubleMatrix2D matrix, IntBinaryOperator comparator) {
     return matrix.viewSelection(IndirectSort.mergesort(0, matrix.rows(), comparator), null);
   }
 }

@@ -10,9 +10,10 @@
  */
 package org.carrot2.math.matrix;
 
-import com.carrotsearch.hppc.sorting.IndirectComparator;
 import org.carrot2.math.mahout.function.Functions;
 import org.carrot2.math.mahout.matrix.DoubleMatrix2D;
+
+import java.util.function.IntBinaryOperator;
 
 /** Base functionality for {@link IterativeMatrixFactorization}s. */
 abstract class IterativeMatrixFactorizationBase extends MatrixFactorizationBase
@@ -119,8 +120,7 @@ abstract class IterativeMatrixFactorizationBase extends MatrixFactorizationBase
       aggregates[i] = VT.viewRow(i).aggregate(Functions.PLUS, Functions.SQUARE);
     }
 
-    final IndirectComparator.DescendingDoubleComparator comparator =
-        new IndirectComparator.DescendingDoubleComparator(aggregates);
+    IntBinaryOperator comparator = (a, b) -> Double.compare(aggregates[b], aggregates[a]);
     V = MatrixUtils.sortedRowsView(VT, comparator).viewDice();
     U = MatrixUtils.sortedRowsView(U.viewDice(), comparator).viewDice();
   }

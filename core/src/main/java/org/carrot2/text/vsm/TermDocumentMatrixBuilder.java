@@ -154,7 +154,7 @@ public class TermDocumentMatrixBuilder extends AttrComposite {
     }
     final int[] stemWeightOrder =
         IndirectSort.mergesort(
-            0, stemsWeight.length, new IndirectComparator.DescendingDoubleComparator(stemsWeight));
+            0, stemsWeight.length, (a, b) -> Double.compare(stemsWeight[b], stemsWeight[a]));
 
     // Calculate the number of terms we can include to fulfill the max matrix size
     final int maxRows = maximumMatrixSize.get() / documentCount;
