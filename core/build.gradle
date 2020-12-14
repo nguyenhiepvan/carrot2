@@ -2,6 +2,8 @@ apply plugin: 'java-library'
 
 apply from: rootProject.file("gradle/jflex.gradle")
 
+java.modularity.inferModulePath.set(true)
+
 configurations {
   langResources
 
