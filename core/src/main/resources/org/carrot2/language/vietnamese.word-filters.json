@@ -1,5 +1,5 @@
 {
-exact: [
+"exact": [
 "a",
 "Âm",
 "An",
@@ -501,6 +501,6 @@ exact: [
 "yếu",
 "Yu"
 ],
-glob: [ ],
-regexp: [ ]
+"glob": [ ],
+"regexp": [ ]
 }
